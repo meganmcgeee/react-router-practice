@@ -29,13 +29,14 @@ const Contact = () => (
 
 // Create links component to create navigation
 // Add Link component for each path and set 'to' property to the path of each component
-// Added activeStyle property so that nav ui visually indicates what page user is on 
+// Added activeStyle property so that nav ui visually indicates what page user is on
+
 
 const Links = () =>
   <nav>
-    <Link activeStyle= {{color: 'purple'}} to="/">Home</Link>
-    <Link activeStyle= {{color: 'purple'}} to="/about">About</Link>
-    <Link activeStyle= {{color: 'purple'}} to="/contact">Contact</Link>
+    <Link activeClassName= "active"  to="/">Home</Link>
+    <Link activeClassName= "active" to="/about">About</Link>
+    <Link activeClassName= "active" to="/contact">Contact</Link>
   </nav>
 
 class App extends React.Component {
