@@ -45,8 +45,8 @@ class App extends React.Component {
       <Router history={ browserHistory }>
         <Route path="/" component={Home}> </Route>
         <Route path="/about" component={About}> </Route>
-          <Route path="/story" component={Story}> </Route>
-          <Route path="/team" component={Team}> </Route>
+          <Route path="story" component={Story}> </Route>
+          <Route path="team" component={Team}> </Route>
         <Route path="/contact" component={Contact}> </Route>
       </Router>
     );
