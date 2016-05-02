@@ -34,7 +34,7 @@ const Contact = () => (
 
 const Links = () =>
   <nav>
-    <Link activeClassName= "active"  to="/">Home</Link>
+    <Link activeClassName= "active" to="/">Home</Link>
     <Link activeClassName= "active" to="/about">About</Link>
     <Link activeClassName= "active" to="/contact">Contact</Link>
   </nav>
@@ -45,6 +45,8 @@ class App extends React.Component {
       <Router history={ browserHistory }>
         <Route path="/" component={Home}> </Route>
         <Route path="/about" component={About}> </Route>
+          <Route path="/story" component={Story}> </Route>
+          <Route path="/team" component={Team}> </Route>
         <Route path="/contact" component={Contact}> </Route>
       </Router>
     );
