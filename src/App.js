@@ -16,12 +16,31 @@ const About = () => (
   <div>
     <h1>About</h1>
     <Links />
+    {props.children}
   </div>
 );
 
 const Contact = () => (
   <div>
     <h1>Contact</h1>
+    <Links />
+  </div>
+);
+
+// Add Team component
+
+const Team = (props) => (
+  <div>
+    <h1>Team</h1>
+    <Links />
+  </div>
+);
+
+// Add about component
+
+const About = (props) => (
+  <div>
+    <h1>About</h1>
     <Links />
   </div>
 );
