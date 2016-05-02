@@ -8,23 +8,27 @@ import {Router, Route, Link, hashHistory } from 'react-router';
 const Home = () => (
   <div>
     <h1>Home</h1>
+    <Links />
   </div>
 )
 
 const About = () => (
   <div>
     <h1>About</h1>
+    <Links />
   </div>
 )
 
 const Contact = () => (
   <div>
     <h1>Contact</h1>
+    <Links />
   </div>
 )
 
 
 // Create links component to create navigation
+// Add Link component for each path and set 'to' property to the path of each component
 
 const Links = () =>
   <nav>
