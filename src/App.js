@@ -1,7 +1,7 @@
 // Import react to so the app can use it
 import React from 'react';
 // Import react-router components and objects needed for project.
-import {Router, Route, Link, hashHistory } from 'react-router';
+import {Router, Route, Link, browserHistory } from 'react-router';
 
 // Create components
 
@@ -29,12 +29,13 @@ const Contact = () => (
 
 // Create links component to create navigation
 // Add Link component for each path and set 'to' property to the path of each component
+// Added activeStyle property so that nav ui visually indicates what page user is on 
 
 const Links = () =>
   <nav>
-    <Link to="/">Home</Link>
-    <Link to="/about">About</Link>
-    <Link to="/contact">Contact</Link>
+    <Link activeStyle= {{color: 'purple'}} to="/">Home</Link>
+    <Link activeStyle= {{color: 'purple'}} to="/about">About</Link>
+    <Link activeStyle= {{color: 'purple'}} to="/contact">Contact</Link>
   </nav>
 
 class App extends React.Component {
