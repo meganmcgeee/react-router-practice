@@ -1,0 +1,16 @@
+{
+  "name": "react-router-practice",
+  "version": "1.0.0",
+  "description": "Practice with react router",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-router": "^2.4.0"
+  }
+}
