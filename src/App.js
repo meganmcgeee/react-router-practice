@@ -26,8 +26,12 @@ const Contact = () => (
 class App extends React.Component {
   render(){
     return (
+      // Add Router component
       <Router history={ hashHistory }>
-
+      // Add Routes to call on components
+        <Route path="/" component={Home}> </Route>
+        <Route path="/about" component={About}> </Route>
+        <Route path="/contact" component={Contact}> </Route>
       </Router>
     );
   }
