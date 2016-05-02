@@ -11,6 +11,18 @@ const Home = () => (
   </div>
 )
 
+const About = () => (
+  <div>
+    <h1>About</h1>
+  </div>
+)
+
+const Contact = () => (
+  <div>
+    <h1>Contact</h1>
+  </div>
+)
+
 
 
 // export app component
