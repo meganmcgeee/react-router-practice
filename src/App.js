@@ -28,6 +28,9 @@ const Contact = () => (
 
 const Links = () =>
   <nav>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+    <Link to="/contact">Contact</Link>
   </nav>
 
 class App extends React.Component {
