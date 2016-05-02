@@ -23,6 +23,13 @@ const Contact = () => (
   </div>
 )
 
+
+// Create links component to create navigation
+
+const Links = () =>
+  <nav>
+  </nav>
+
 class App extends React.Component {
   render(){
     return (
