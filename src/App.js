@@ -66,7 +66,7 @@ class App extends React.Component {
     return (
       <Router history={ browserHistory }>
         <Route path="/" component={Outer} />
-          <Route path="about" component={About}>
+          <IndexRoute component={About}></IndexRoute>
             <Route path="story" component={Story} />
             <Route path="team" component={Team} />
           </Route>
