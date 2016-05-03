@@ -5,9 +5,9 @@ import {Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
 // Create components
 
-const Home = () => (
+const Outer = () => (
   <div>
-    <h1>Home</h1>
+    <h1>Our Site</h1>
     <Links />
   </div>
 );
