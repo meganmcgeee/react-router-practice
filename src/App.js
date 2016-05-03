@@ -9,13 +9,13 @@ const Outer = () => (
   <div>
     <h1>Our Site</h1>
     <Links />
+    {props.children}
   </div>
 );
 
 const About = (props) => (
   <div>
     <h1>About</h1>
-    <Links />
     {props.children}
   </div>
 
@@ -24,7 +24,6 @@ const About = (props) => (
 const Contact = () => (
   <div>
     <h1>Contact</h1>
-    <Links />
   </div>
 );
 
@@ -66,12 +65,12 @@ class App extends React.Component {
   render(){
     return (
       <Router history={ browserHistory }>
-        <Route path="/" component={Home} />
-        <Route path="about" component={About}>
-          <Route path="story" component={Story} />
-          <Route path="team" component={Team} />
-        </Route>
-        <Route path="contact" component={Contact} />
+        <Route path="/" component={Outer} />
+          <Route path="about" component={About}>
+            <Route path="story" component={Story} />
+            <Route path="team" component={Team} />
+          </Route>
+          <Route path="contact" component={Contact} />
       </Router>
     );
   }
