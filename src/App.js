@@ -5,7 +5,7 @@ import {Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
 // Create components
 
-const Outer = () => (
+const Outer = (props) => (
   <div>
     <h1>Our Site</h1>
     <Links />
@@ -53,7 +53,7 @@ const Story = (props) => (
 
 const Links = () =>
   <nav>
-    <Link activeClassName= "active" to="/">Home</Link>
+    <Link activeClassName= "active" to="/">Our Site</Link>
     <Link activeClassName= "active" to="/about">About</Link>
     <Link activeClassName= "active" to="/about/story">Story</Link>
     <Link activeClassName= "active" to="/about/team">Team</Link>
@@ -65,12 +65,13 @@ class App extends React.Component {
   render(){
     return (
       <Router history={ browserHistory }>
-        <Route path="/" component={Outer} />
-          <IndexRoute component={About}></IndexRoute>
+        <Route path="/" component={Outer}>
+          <Route path="/about" component={About}>
             <Route path="story" component={Story} />
             <Route path="team" component={Team} />
           </Route>
-          <Route path="contact" component={Contact} />
+          <Route path="contact" component={Contact}></Route>
+        </Route>
       </Router>
     );
   }
