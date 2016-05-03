@@ -12,12 +12,13 @@ const Home = () => (
   </div>
 );
 
-const About = () => (
+const About = (props) => (
   <div>
     <h1>About</h1>
     <Links />
-    {props.children}
+    {props.child}
   </div>
+
 );
 
 const Contact = () => (
@@ -33,15 +34,17 @@ const Team = (props) => (
   <div>
     <h1>Team</h1>
     <Links />
+    {props.child}
   </div>
 );
 
 // Add about component
 
-const About = (props) => (
+const Story = (props) => (
   <div>
-    <h1>About</h1>
+    <h1>Story</h1>
     <Links />
+    {props.child}
   </div>
 );
 
@@ -55,7 +58,10 @@ const Links = () =>
   <nav>
     <Link activeClassName= "active" to="/">Home</Link>
     <Link activeClassName= "active" to="/about">About</Link>
+      <Link activeClassName= "active" to="/about/story">Story</Link>
+      <Link activeClassName= "active" to="/about/team">Team</Link>
     <Link activeClassName= "active" to="/contact">Contact</Link>
+
   </nav>
 
 class App extends React.Component {
@@ -64,9 +70,10 @@ class App extends React.Component {
       <Router history={ browserHistory }>
         <Route path="/" component={Home}> </Route>
         <Route path="/about" component={About}> </Route>
-          <Route path="story" component={Story}> </Route>
-          <Route path="team" component={Team}> </Route>
         <Route path="/contact" component={Contact}> </Route>
+          <Route path="/about/story" component={Story}> </Route>
+          <Route path="/about/team" component={Team}> </Route>
+
       </Router>
     );
   }
