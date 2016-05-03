@@ -1,7 +1,7 @@
 // Import react to so the app can use it
 import React from 'react';
 // Import react-router components and objects needed for project.
-import {Router, Route, Link, browserHistory } from 'react-router';
+import {Router, Route, Link, IndexRoute, browserHistory } from 'react-router';
 
 // Create components
 
@@ -16,7 +16,7 @@ const About = (props) => (
   <div>
     <h1>About</h1>
     <Links />
-    {props.child}
+    {props.children}
   </div>
 
 );
@@ -33,8 +33,7 @@ const Contact = () => (
 const Team = (props) => (
   <div>
     <h1>Team</h1>
-    <Links />
-    {props.child}
+    <p> I can tell you all about my powerful team of natural born leaders here.</p>
   </div>
 );
 
@@ -43,8 +42,7 @@ const Team = (props) => (
 const Story = (props) => (
   <div>
     <h1>Story</h1>
-    <Links />
-    {props.child}
+    <p> This is the story that I am writing to explain how I got here and how a lot of us got here.</p>
   </div>
 );
 
@@ -58,8 +56,8 @@ const Links = () =>
   <nav>
     <Link activeClassName= "active" to="/">Home</Link>
     <Link activeClassName= "active" to="/about">About</Link>
-      <Link activeClassName= "active" to="/about/story">Story</Link>
-      <Link activeClassName= "active" to="/about/team">Team</Link>
+    <Link activeClassName= "active" to="/about/story">Story</Link>
+    <Link activeClassName= "active" to="/about/team">Team</Link>
     <Link activeClassName= "active" to="/contact">Contact</Link>
 
   </nav>
@@ -68,12 +66,12 @@ class App extends React.Component {
   render(){
     return (
       <Router history={ browserHistory }>
-        <Route path="/" component={Home}> </Route>
-        <Route path="/about" component={About}> </Route>
-        <Route path="/contact" component={Contact}> </Route>
-          <Route path="/about/story" component={Story}> </Route>
-          <Route path="/about/team" component={Team}> </Route>
-
+        <Route path="/" component={Home} />
+        <Route path="about" component={About}>
+          <Route path="story" component={Story} />
+          <Route path="team" component={Team} />
+        </Route>
+        <Route path="contact" component={Contact} />
       </Router>
     );
   }
